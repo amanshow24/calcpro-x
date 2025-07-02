@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #434343, #000000);
+  min-height: 100vh;
+  display: block; /* Remove centering */
+  padding: 1rem;
+}
+
+.wrapper {
+  max-width: 420px;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.voice-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#voice-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+#voice-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  margin-left: 0.8rem;
+  flex-grow: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.operator {
+  background-color: #ff7b00cc;
+}
+
+.operator:hover {
+  background-color: #ff9900;
+}
+
+.function {
+  background-color: #e91e63aa;
+}
+
+.function:hover {
+  background-color: #e91e63;
+}
+
+.equal {
+  background-color: #4caf50bb;
+  grid-column: span 1;
+}
+
+.equal:hover {
+  background-color: #4caf50;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    padding: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  #display {
+    font-size: 1.5rem;
+    height: 50px;
+  }
+
+  #voice-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+#caption {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Mic active style */
+#voice-btn.listening {
+  background-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(255, 0, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.voice-help {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.voice-help h2 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.voice-help ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.voice-help li {
+  margin-bottom: 0.6rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.voice-info {
+  color: #ddd;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}

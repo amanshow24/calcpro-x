@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>CalcPro X</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" media="(max-width: 480px)" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">CalcPro X</h1>
+
+    <div class="calculator">
+      <!-- Voice bar: mic + display -->
+      <div class="voice-bar">
+        <button id="voice-btn" title="Mic Off – Click to speak">🎤</button>
+        <input type="text" id="display" placeholder="0" readonly />
+      </div>
+
+      <div class="buttons">
+        <button class="btn function" data-value="C">C</button>
+        <button class="btn function" data-value="←">←</button>
+        <button class="btn function" data-value="%">%</button>
+        <button class="btn operator" data-value="/">÷</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="*">×</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="-">−</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <button class="btn zero" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn equal" data-value="=">=</button>
+      </div>
+    </div>
+
+  <!-- Voice Command Info Text -->
+<p class="voice-info">
+  🎙️ <strong>Voice Commands You Can Say:</strong><br>
+  <strong>Basic Math:</strong> "five plus five", "twelve divided by four"<br>
+  <strong>Operators:</strong> "plus", "minus", "times", "divided by"<br>
+  <strong>Special:</strong> "clear", "delete"<br>
+  <strong>Auto Calculate:</strong> Say expression directly, result shows<br>
+  <strong>Stop Mic:</strong> Click 🔴 again
+</p>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 <strong>CalcPro X</strong>. All rights reserved. Aman Show.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
